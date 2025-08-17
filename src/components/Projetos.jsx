@@ -92,7 +92,7 @@ function Projetos() {
         "Este portfólio reflete as habilidades e o estilo em design que orientam todo o nosso trabalho. Leve, funcional e responsivo, inclui modelos 3D inovadores e uma seção de contato eficiente, tudo pensado para destacar projetos e facilitar o contato com empresas.",
         "Este portfólio reflete as habilidades e o estilo em design que orientam todo o nosso trabalho. Leve, funcional e responsivo, inclui modelos 3D inovadores e uma seção de contato eficiente, tudo pensado para destacar projetos e facilitar o contato com empresas."
     ];
-    const imagensProjetos = ["ProjetoWport.png", "PortfolioA.png", "PortfolioB.png"];
+    const imagensProjetos = ["ProjetoWport", "PortfolioA", "PortfolioB"];
     const links = ["https://wportbr.netlify.app/", "https://adrianobarrosdev.com/", "https://brunopuzzuoli.netlify.app/"];
 
     return (
@@ -104,7 +104,32 @@ function Projetos() {
             <div className="col-12 d-flex justify-content-around     aling-items-center flex-wrap">
                 {projetosEmpresa.map((titleProjeto, index) => (
                     <ProjetosCard data-aos="slide-up" data-aos-duration="1200" key={index}>
-                        <img src={imagensProjetos[index]} alt={imagensProjetos[index].split(".")[0]} />
+                        <div id={`carousel${index}`} className="carousel slide">
+                            <div className="carousel-indicators">
+                                <button type="button" data-bs-target={`#carousel${index}`} data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target={`#carousel${index}`} data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target={`#carousel${index}`} data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div className="carousel-inner">
+                                <div className="carousel-item active">
+                                    <img src={`${imagensProjetos[index]}1.png`} className="d-block w-100" alt="..." />
+                                </div>
+                                <div className="carousel-item">
+                                    <img src={`${imagensProjetos[index]}2.png`} className="d-block w-100" alt="..." />
+                                </div>
+                                <div className="carousel-item">
+                                    <img src={`${imagensProjetos[index]}3.png`} className="d-block w-100" alt="..." />
+                                </div>
+                            </div>
+                            <button className="carousel-control-prev" type="button" data-bs-target={`#carousel${index}`} data-bs-slide="prev">
+                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Previous</span>
+                            </button>
+                            <button className="carousel-control-next" type="button" data-bs-target={`#carousel${index}`} data-bs-slide="next">
+                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span className="visually-hidden">Next</span>
+                            </button>
+                        </div> 
                         <div style={{padding: "10px"}}>
                             <h3>{titleProjeto}</h3>
                             <p>{descricao[index]}</p>

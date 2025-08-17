@@ -118,6 +118,8 @@ export function Footer() {
         }
     }
 
+    const urlBasica = import.meta.env.VITE_API_URL;
+
     return (
         <Container data-aos="fade-up" data-aos-duration="1200" data-aos-once="true">
             
@@ -131,7 +133,7 @@ export function Footer() {
             
             <div className="d-flex justify-content-center align-items-center gap-3 mobile" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
                 <button className="verPlanos" onClick={scrollToPlanos}>Ver Planos</button>
-                <button className="faleConosco">Fale Conosco</button>
+                <button className="faleConosco" onClick={() => window.open(urlBasica, "_blank")}>Fale Conosco</button>
             </div>
             
 

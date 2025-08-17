@@ -193,23 +193,28 @@ const Indicacao = styled.div`
         font-size: 15px;
         font-weight: 400;
         margin: 4px 0;
+        white-space: nowrap;
     }
     p {
-        color: rgba(250, 250, 250, 0.5);
         font-weight: 200;
-        font-size: 10px;
-        opacity: 0.5;
+        font-size: 11px;
+        opacity: 0.7;
         margin: 0;
+        white-space: nowrap;
     }
 
     @media (max-width: 576px) {
         margin-bottom: 30px;
+        align-items: start;
 
         h4 {
-            font-size: 2vw;
+            padding-top: 5px;
+            font-size: 3vw;
         }
         p {
-            font-size: 2vw;
+            font-size: 2.5vw;
+            padding-top: 8px;
+            white-space: normal;
         }
     }
 
@@ -218,6 +223,7 @@ const Indicacao = styled.div`
 const VerticalLine = styled.div`
     width: 5px;
     height: 100%;
+    min-height: 40px;
     border-radius: 5px;
 `;
 

@@ -206,6 +206,14 @@ const WhatsappButton = styled.button`
         opacity: 1;
     }
 
+    @media (max-width: 576px) {
+        font-size: 3vw;
+
+        &:hover {
+            width: 90%;
+        }
+    }
+
 `;
 
 
