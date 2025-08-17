@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import styled from "styled-components";
 
@@ -235,7 +236,7 @@ export function ContactForm() {
     }
 
     // Function to handle form submission
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault(); // Prevents the default form submission behavior (page reload)
         setLoading(true); // Set loading to true while the form is being processed
 
@@ -259,34 +260,32 @@ export function ContactForm() {
             return; // Exit the function to prevent further action
         }
 
-        // Se não houver erros, envia os dados do formulário para a função do Netlify
-        try {
-            const response = await fetch('/.netlify/functions/sendEmail', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: form.name,
-                    phone: form.phone,
-                    message: form.message,
-                }),
+        // If no errors, send the form data via email using emailjs service
+        emailjs.send(
+            import.meta.env.VITE_SERVICE,
+            import.meta.env.VITE_TEMPLATE,
+            {
+                from_name: form.name, // The sender's name
+                from_phone: form.phone, // The sender's phone
+                message: form.message, // The message content
+            },
+            import.meta.env.VITE_KEY
+        )
+        .then(() => {
+            setLoading(false); // Hide loading spinner after successful email sending
+            alert("Obrigado. Entrarei em contato com você o mais rápido possível."); // Show success message
+
+            // Reset the form to empty values
+            setForm({
+                name: '',
+                phone: '',
+                message: '',
             });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                alert("Obrigado. Entrarei em contato com você o mais rápido possível.");
-                setForm({ name: '', phone: '', message: '' });
-            } else {
-                alert(result.message || "Algo deu errado.");
-            }
-        } catch (error) {
-            console.error('Erro ao enviar o email:', error);
-            alert("Houve um erro ao enviar a mensagem.");
-        }
-
-        setLoading(false); // Define o estado de carregamento como falso após a resposta
+        }, (error) => {
+            setLoading(false); // Hide loading spinner if an error occurs
+            console.log(error); // Log the error to the console
+            alert("Algo deu errado."); // Show error message
+        });
     }
 
     const urlBasica = import.meta.env.VITE_API_URL;
