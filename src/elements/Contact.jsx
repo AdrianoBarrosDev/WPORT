@@ -12,6 +12,7 @@ const ContactDiv = styled.div`
     @media (max-width: 1400px) {
         width: 100%;
         margin-bottom: 100px;
+        justify-content: center;
     }
 
     @media (max-width: 576px) {
