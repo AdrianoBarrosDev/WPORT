@@ -1,0 +1,12 @@
+body {
+  background-color: #13131E;
+}
+
+#root {
+  overflow: hidden;
+}
+
+button:active {
+  transition: 0.35s ease;
+  transform: scale(0.9);
+}
