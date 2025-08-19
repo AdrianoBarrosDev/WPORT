@@ -275,7 +275,7 @@ export function Planos() {
 
     return (
         <Container data-aos="fade-up" data-aos-duration="1000" id="planosSection">
-            <h2>Planos</h2>
+            <h2>Pacotes</h2>
             <div className="row w-100 d-flex justify-content-center align-items-center" style={{gap: "80px"}}>
                 <CardPlanos data-aos="flip-left" data-aos-duration="1200">
 
@@ -285,7 +285,7 @@ export function Planos() {
                             <TitlePlano style={{backgroundColor: "#1B407C"}}>
                                 <p>Básico</p>
                             </TitlePlano>
-                            <h3>Plano Básico</h3>
+                            <h3>Pacote Básico</h3>
                         </div>
 
                         <BalonPrice style={{background: "linear-gradient(to bottom, #224A8C, #D5D5D5)"}}>
@@ -341,7 +341,7 @@ export function Planos() {
                             <TitlePlano style={{backgroundColor: "#6A3EF2"}}>
                                 <p>PRO</p>
                             </TitlePlano>
-                            <h3>Plano Profissional</h3>
+                            <h3>Pacote Profissional</h3>
                         </div>
 
                         <BalonPrice style={{background: "linear-gradient(to bottom, #7F5AF0, #D5D5D5)"}}>
@@ -397,7 +397,7 @@ export function Planos() {
                             <TitlePlano style={{backgroundColor: "#CD9F09"}}>
                                 <p>Premium</p>
                             </TitlePlano>
-                            <h3>Plano Premium</h3>
+                            <h3>Pacote Premium</h3>
                         </div>
                         
                         <BalonPrice style={{background: "linear-gradient(to bottom, #D4AF37, #D5D5D5)"}}>

@@ -93,7 +93,7 @@ const LogoBackground = styled.div`
 `;
 
 const PlanosButton = styled.button`
-    width: 150px;
+    width: 175px;
     height: 50px;
     color: white;
     background-color: #6A3EF2;
@@ -149,7 +149,7 @@ function Hero() {
                     data-aos-duration="1000" 
                     onClick={scrollToPlanos}
                 >
-                    Veja os Planos
+                    Veja as Opções
                 </PlanosButton>
 
         </Container>

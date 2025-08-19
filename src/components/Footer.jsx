@@ -132,7 +132,7 @@ export function Footer() {
             </div>
             
             <div className="d-flex justify-content-center align-items-center gap-3 mobile" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
-                <button className="verPlanos" onClick={scrollToPlanos}>Ver Planos</button>
+                <button className="verPlanos" onClick={scrollToPlanos}>Ver Pacotes</button>
                 <button className="faleConosco" onClick={() => window.open(urlBasica, "_blank")}>Fale Conosco</button>
             </div>
             

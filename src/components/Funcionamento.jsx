@@ -199,7 +199,7 @@ export function Funcionamento() {
 
                         <Descricao data-aos="slide-up" data-aos-duration="1700" data-aos-offset="300">
                             <h3>Fazer Pedido</h3>
-                            <p>Você escolhe o plano ideal e preenche um formulário inicial. Nele, você indica quais seções deseja (como Sobre, Serviços, Contato, Portfólio etc.) e envia as informações que quer incluir no site: textos, imagens, redes sociais, links e preferências de design. Quanto mais detalhes, melhor!</p>
+                            <p>Você escolhe o pacote ideal e preenche um formulário inicial. Nele, você indica quais seções deseja (como Sobre, Serviços, Contato, Portfólio etc.) e envia as informações que quer incluir no site: textos, imagens, redes sociais, links e preferências de design. Quanto mais detalhes, melhor!</p>
                         </Descricao>
                         <Descricao data-aos="slide-up" data-aos-duration="2000" data-aos-offset="300">
                             <h3>Aprovar Design</h3>
@@ -228,7 +228,7 @@ export function Funcionamento() {
                         <img src="EclipseHabilitado.png" alt="Eclipse" data-aos="slide-up" data-aos-duration="2000" />
                         <DescricaoMobile data-aos="slide-up" data-aos-duration="1200" data-aos-offset="300">
                             <h3>Fazer Pedido</h3>
-                            <p>Você escolhe o plano ideal e preenche um formulário inicial. Nele, você indica quais seções deseja (como Sobre, Serviços, Contato, Portfólio etc.) e envia as informações que quer incluir no site: textos, imagens, redes sociais, links e preferências de design. Quanto mais detalhes, melhor!</p>
+                            <p>Você escolhe o pacote ideal e preenche um formulário inicial. Nele, você indica quais seções deseja (como Sobre, Serviços, Contato, Portfólio etc.) e envia as informações que quer incluir no site: textos, imagens, redes sociais, links e preferências de design. Quanto mais detalhes, melhor!</p>
                         </DescricaoMobile>
                     </div>
 
