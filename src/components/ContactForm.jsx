@@ -296,7 +296,7 @@ export function ContactForm() {
         });
     }
 
-    const urlBasica = import.meta.env.VITE_API_URL;
+    const urlBasica = import.meta.env.VITE_API_URL + '?text=Ol%C3%A1%2C%20estou%20entrando%20em%20contato%20para%20conhecer%20melhor%20os%20servi%C3%A7os%20oferecidos%20pela%20WPORT.';
 
     return (
         <InfoBox
