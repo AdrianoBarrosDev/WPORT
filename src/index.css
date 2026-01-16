@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 15% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 15% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 70% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 200 80% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 260 70% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors */
+    --neon-purple: 260 70% 60%;
+    --neon-blue: 220 80% 60%;
+    --neon-cyan: 185 80% 55%;
+    --space-dark: 240 20% 4%;
+    --space-mid: 250 25% 10%;
+    --glass: 260 30% 15%;
+  }
+
+  .dark {
+    --background: 240 20% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 15% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 15% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 260 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 60%;
+    --accent: 200 80% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 30% 20%;
+    --input: 260 30% 20%;
+    --ring: 260 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Glass effect surfaces */
+  .glass-surface {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  }
+
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-lg border border-border/30 rounded-xl;
+  }
+
+  /* Gradient text effects */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .gradient-text-light {
+    @apply bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-purple {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4),
+                0 0 40px hsl(var(--primary) / 0.2);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.4),
+                0 0 40px hsl(var(--accent) / 0.2);
+  }
+
+  .glow-neon {
+    box-shadow: 0 0 15px hsl(var(--primary) / 0.5),
+                0 0 30px hsl(var(--primary) / 0.3),
+                0 0 45px hsl(var(--secondary) / 0.2);
+  }
+
+  /* Star background */
+  .stars-bg {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--foreground) / 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--foreground) / 0.2), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--foreground) / 0.4), transparent),
+      radial-gradient(2px 2px at 130px 80px, hsl(var(--foreground) / 0.2), transparent),
+      radial-gradient(1px 1px at 160px 30px, hsl(var(--foreground) / 0.3), transparent),
+      radial-gradient(2px 2px at 200px 60px, hsl(var(--foreground) / 0.15), transparent),
+      radial-gradient(1px 1px at 250px 90px, hsl(var(--foreground) / 0.25), transparent),
+      radial-gradient(2px 2px at 300px 20px, hsl(var(--foreground) / 0.2), transparent);
+    background-size: 320px 100px;
+    animation: twinkle 8s ease-in-out infinite;
+  }
+
+  /* Neon line */
+  .neon-line {
+    background: linear-gradient(90deg, 
+      transparent, 
+      hsl(var(--primary)), 
+      hsl(var(--secondary)), 
+      hsl(var(--primary)), 
+      transparent
+    );
+    filter: blur(1px);
+    box-shadow: 0 0 10px hsl(var(--primary) / 0.8),
+                0 0 20px hsl(var(--secondary) / 0.6);
+  }
+
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-2;
+    box-shadow: 0 20px 40px hsl(var(--primary) / 0.15),
+                0 0 60px hsl(var(--primary) / 0.1);
+  }
+
+  /* Price badge */
+  .price-badge {
+    @apply absolute -top-4 -right-4 bg-gradient-to-br from-primary to-secondary text-primary-foreground font-bold px-4 py-2 rounded-full text-sm;
+    box-shadow: 0 4px 20px hsl(var(--primary) / 0.5);
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply w-16 h-1 bg-gradient-to-r from-primary to-secondary rounded-full mx-auto;
+  }
+
+  /* CTA Section */
+  .cta-gradient {
+    background: linear-gradient(135deg, 
+      hsl(var(--primary) / 0.3) 0%, 
+      hsl(var(--secondary) / 0.2) 50%, 
+      hsl(var(--primary) / 0.3) 100%
+    );
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4),
+                0 0 40px hsl(var(--primary) / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.6),
+                0 0 60px hsl(var(--primary) / 0.3);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
