@@ -24,16 +24,6 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © 2026 WPORT. Todos os direitos reservados.
           </p>
-
-          {/* Links */}
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Política de Privacidade
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Termos de Uso
-            </a>
-          </div>
         </motion.div>
       </div>
     </footer>
