@@ -4,6 +4,13 @@ import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
+    title: "Site Corretora Marina",
+    description: "Site profissional da Corretora Marina, desenvolvido para atrair clientes e fortalecer a presença digital. Com design moderno e navegação intuitiva, transmite confiança, informações importantes e profissionalismo no mercado de planos de saúde.",
+    tags: ["Site Comercial"],
+    image: "/PortfolioMarina.png",
+    link: "https://marinabarros.netlify.app/",
+  },
+  {
     title: "Site WPORT",
     description: "Um site moderno e responsivo, criado para apresentar nossos serviços de forma clara e acessível. Desenvolvido para ser o cartão de visitas digital da empresa, com design profissional que funciona perfeitamente em qualquer dispositivo.",
     tags: ["Site Comercial"],
@@ -70,7 +77,7 @@ export function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center"
         >
           {projects.map((project, index) => (
             <motion.div
@@ -78,11 +85,11 @@ export function Projects() {
               variants={itemVariants}
               className="glass-card overflow-hidden card-hover group"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden" onClick={() => window.open(project.link)} style={{cursor: "pointer"}}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
               </div>
