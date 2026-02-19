@@ -18,9 +18,9 @@ export function CTA() {
         >
           {/* Logo */}
           <div className="flex justify-center mb-8">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="text-primary">
-              <path d="M12 8L24 40L28 28L40 24L12 8Z" stroke="currentColor" strokeWidth="2" fill="none" />
-              <path d="M24 40L20 28L8 24" stroke="currentColor" strokeWidth="2" fill="none" />
+            <svg width="150" height="100" viewBox="0 0 48 48" fill="none" className="text-primary">
+              <path d="M4 12L14 38L24 12L34 38L44 12" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M45 1.5 A12.5 12.5 0 1 1 32.5 14" stroke="currentColor" strokeWidth="2.5" fill="none" transform="rotate(-56 45 14)"/>
             </svg>
           </div>
 

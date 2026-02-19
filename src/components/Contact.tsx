@@ -190,9 +190,9 @@ export function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <svg width="32" height="32" viewBox="0 0 48 48" fill="none" className="text-primary">
-                <path d="M12 8L24 40L28 28L40 24L12 8Z" stroke="currentColor" strokeWidth="2" fill="none" />
-                <path d="M24 40L20 28L8 24" stroke="currentColor" strokeWidth="2" fill="none" />
+              <svg width="46" height="32" viewBox="0 0 48 48" fill="none" className="text-primary">
+                <path d="M4 12L14 38L24 12L34 38L44 12" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M45 1.5 A12.5 12.5 0 1 1 32.5 14" stroke="currentColor" strokeWidth="2.5" fill="none" transform="rotate(-56 45 14)"/>
               </svg>
               <span className="font-display text-2xl font-bold gradient-text-purple">WPORT</span>
             </div>
